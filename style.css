@@ -1,62 +1,10 @@
-html {
-  position: relative;
-}
-
-body {
-  margin-bottom: 100px;
-  margin-top: 30px;
-}
-
 .jumbotron {
-  background-image: url(img/gambar.png);
-  background-attachment: fixed;
-  background-size: cover;
-  height: 400px;
-  color: #eaeaea;
+  padding-top: 6rem;
+  background-color: #a2edfa;
 }
-.jumbotron img {
-  width: 200px;
-  border: 5px solid #eaeaea;
-  box-shadow: rgba(0, 0, 0, 0.5);
-}
-.jumbotron h1,
-.jumbotron p {
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
-}
-hr {
-  width: 250px;
-  border-top: 3px solid #777;
+#Gallery {
+  background-color: #a2edfa;
 }
 section {
-  min-height: 600px;
   padding-top: 5rem;
-}
-
-.portfolio {
-  background-color: rgb(214, 208, 208);
-}
-
-.contact {
-  min-height: 800px;
-}
-footer {
-  position: absolute;
-  width: 100%;
-  height: 100px;
-  bottom: 0;
-  background-color: #333;
-  padding-top: 30px;
-}
-
-footer p {
-  color: white;
-  font-size: 1em;
-}
-
-footer p i {
-  color: salmon;
-}
-footer p a {
-  font-weight: bold;
-  color: rgb(132, 132, 245);
 }
