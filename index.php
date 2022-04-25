@@ -1,3 +1,30 @@
+<?php
+ $conn = mysqli_connect("localhost", "root", "", "port-iksal");
+
+
+$name = htmlspecialchars($conn['nama']);
+$email = htmlspecialchars($conn['email']);
+$pesan = $conn['pesan'];
+
+$result= mysqli_query($conn, "INSERT INTO portfolio VALUES '$name'  ");
+
+if(isset($_POST['kirim'])) {
+  if ($_POST > 0) {
+      echo " <script>
+             alert ('data berhasil ditambahkan');
+             document.location.href = 'index.php';
+            </script> ";
+  }else {
+      echo " <script>
+             alert ('data gagal ditambahkan');
+             document.location.href = 'index.php';
+             </script> ";
+   }
+  }
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -27,7 +54,7 @@
     }
 
   </style>
-  
+
   <body id="home">
     <!--navbar-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm fixed-top">
@@ -167,7 +194,7 @@
         </div>
         <div class="row justify-content-center mb-3">
           <div class="col-md-7">
-            <form>
+            <form action="" method="POST">
               <div class="mb-3">
                 <label for="name" class="form-label">Nama :</label>
                 <input type="text" class="form-control" id="name" aria-describedby="name">
@@ -180,7 +207,7 @@
                 <textarea class="form-control" id="pesan" rows="2"></textarea>
               </div>
               <div class="col-md-7 mb-8">
-              <button type="submit" class="btn btn-primary">Kirim</button>
+              <button type="submit" class="btn btn-primary" name="kirim">Kirim</button>
             </form>
           </div>
         </div>
